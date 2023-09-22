@@ -3,21 +3,26 @@
 [![](https://img.shields.io/badge/Open_in_DevExpress_Support_Center-FF7200?style=flat-square&logo=DevExpress&logoColor=white)](https://supportcenter.devexpress.com/ticket/details/T158525)
 [![](https://img.shields.io/badge/📖_How_to_use_DevExpress_Examples-e9f6fc?style=flat-square)](https://docs.devexpress.com/GeneralInformation/403183)
 <!-- default badges end -->
-<!-- default file list -->
-*Files to look at*:
+
+# WinForms Gauge - Configure linear gauge to fill the entire space if the width is significantly greater than the height
+
+The Linear Gauge has an aspect ratio of 1:2 ([Coordinate System](https://docs.devexpress.com/WindowsForms/18220/controls-and-libraries/gauges/concepts/coordinate-system)). You can not make the Lihear Gauge wider in automatic mode. If you simplify the gauge layout (for example, remove the [Background Layer](https://docs.devexpress.com/WindowsForms/DevExpress.XtraGauges.Win.Gauges.Linear.LinearGauge.BackgroundLayers)) and enable the [AutoSize](https://docs.devexpress.com/WindowsForms/DevExpress.XtraGauges.Win.Gauges.Linear.LinearGauge.AutoSize) option, the aspect ratio will be recalculated based on the gauge layout.
+
+The following gauge has an aspect ratio of 1:4 :
+
+![WinForms Linear Gauge](https://raw.githubusercontent.com/DevExpress-Examples/how-to-configure-linear-gauge-to-fill-all-space-if-width-exceeds-height-significantly-t158525/14.1.7+/media/3502ad27-4ec0-11e4-80ba-00155d624807.png)
+
+This example demonstrates how to scale the linear gauge horizontally:
+
+![WinForms Linear Gauge with Custom Aspect Ratio](https://raw.githubusercontent.com/DevExpress-Examples/how-to-configure-linear-gauge-to-fill-all-space-if-width-exceeds-height-significantly-t158525/14.1.7+/media/97aa6654-4ec0-11e4-80ba-00155d624807.png)
+
+## Implementation Details
+
+* Disable the [AutoSize](https://docs.devexpress.com/WindowsForms/DevExpress.XtraGauges.Win.Gauges.Linear.LinearGauge.AutoSize) option.
+* Calculate [Bounds](https://documentation.devexpress.com/#CoreLibraries/DevExpressXtraGaugesCoreModelBaseGauge_Boundstopic) to align the linear gauge inside the Gauge Control.
+* Specify [StartPoint](https://docs.devexpress.com/CoreLibraries/DevExpress.XtraGauges.Core.Model.LinearScale.StartPoint) and [EndPoint](https://docs.devexpress.com/CoreLibraries/DevExpress.XtraGauges.Core.Model.LinearScale.EndPoint) properties to stretch the scale.
+
+
+## Files to Review
 
 * [Form1.cs](./CS/WindowsFormsApplication1/Form1.cs) (VB: [Form1.vb](./VB/WindowsFormsApplication1/Form1.vb))
-* [Program.cs](./CS/WindowsFormsApplication1/Program.cs) (VB: [Program.vb](./VB/WindowsFormsApplication1/Program.vb))
-<!-- default file list end -->
-# How to configure Linear Gauge to fill all space if width exceeds height significantly
-
-
-<p>The default <a href="https://documentation.devexpress.com/#WindowsForms/CustomDocument4751">Linear Gauge</a> has 1:2 size proportion: <a href="https://documentation.devexpress.com/#WindowsForms/CustomDocument18220">Coordinate System</a>. This means that you are not able to resize it wider in automatic mode. If you simplify the gauge layout (e.g. remove  <a href="https://documentation.devexpress.com/#WindowsForms/CustomDocument11503">Background Layer</a>) and enable the <a href="https://documentation.devexpress.com/#WindowsForms/DevExpressXtraGaugesWinGaugesLinearLinearGauge_AutoSizetopic">AutoSize Property</a>, the gauge proportion will be recalculated automatically based on the current gauge layout. The following gauge has 1:4 height to width proportion. </p>
-<img src="https://raw.githubusercontent.com/DevExpress-Examples/how-to-configure-linear-gauge-to-fill-all-space-if-width-exceeds-height-significantly-t158525/14.1.7+/media/3502ad27-4ec0-11e4-80ba-00155d624807.png"><br /><br />
-<p>This example demonstrates how to scale the gauge horizontally to achieve the following result:</p>
-<img src="https://raw.githubusercontent.com/DevExpress-Examples/how-to-configure-linear-gauge-to-fill-all-space-if-width-exceeds-height-significantly-t158525/14.1.7+/media/97aa6654-4ec0-11e4-80ba-00155d624807.png"><br />
-<p><br />To accomplish this task, it is necessary to disable the <a href="https://documentation.devexpress.com/#WindowsForms/DevExpressXtraGaugesWinGaugesLinearLinearGauge_AutoSizetopic">AutoSize Property</a> and calculate <a href="https://documentation.devexpress.com/#CoreLibraries/DevExpressXtraGaugesCoreModelBaseGauge_Boundstopic">Bounds</a> manually to correctly align the gauge inside <a href="https://documentation.devexpress.com/#WindowsForms/clsDevExpressXtraGaugesWinGaugeControltopic">GaugeControl</a>. In addition, set <a href="https://documentation.devexpress.com/#CoreLibraries/DevExpressXtraGaugesCoreModelLinearScale_StartPointtopic">StartPoint</a> and <a href="https://documentation.devexpress.com/#CoreLibraries/DevExpressXtraGaugesCoreModelLinearScale_EndPointtopic">EndPoint</a> manually to stretch the scale. <br />Note that in the attached example, two constants are used "gaugeScaleProportion" and "markerSizeProportion". It is necessary to calculate them manually by making the default gauge screenshot. </p>
-
-<br/>
-
-
