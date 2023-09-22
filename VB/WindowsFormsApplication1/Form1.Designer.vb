@@ -1,5 +1,7 @@
-﻿Namespace WindowsFormsApplication1
-    Partial Public Class Form1
+Namespace WindowsFormsApplication1
+
+    Partial Class Form1
+
         ''' <summary>
         ''' Required designer variable.
         ''' </summary>
@@ -10,35 +12,35 @@
         ''' </summary>
         ''' <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
         Protected Overrides Sub Dispose(ByVal disposing As Boolean)
-            If disposing AndAlso (components IsNot Nothing) Then
-                components.Dispose()
+            If disposing AndAlso (Me.components IsNot Nothing) Then
+                Me.components.Dispose()
             End If
+
             MyBase.Dispose(disposing)
         End Sub
 
-        #Region "Windows Form Designer generated code"
-
+'#Region "Windows Form Designer generated code"
         ''' <summary>
         ''' Required method for Designer support - do not modify
         ''' the contents of this method with the code editor.
         ''' </summary>
         Private Sub InitializeComponent()
-            Dim linearScaleRange1 As New DevExpress.XtraGauges.Core.Model.LinearScaleRange()
-            Dim linearScaleRange2 As New DevExpress.XtraGauges.Core.Model.LinearScaleRange()
-            Dim linearScaleRange3 As New DevExpress.XtraGauges.Core.Model.LinearScaleRange()
+            Dim linearScaleRange1 As DevExpress.XtraGauges.Core.Model.LinearScaleRange = New DevExpress.XtraGauges.Core.Model.LinearScaleRange()
+            Dim linearScaleRange2 As DevExpress.XtraGauges.Core.Model.LinearScaleRange = New DevExpress.XtraGauges.Core.Model.LinearScaleRange()
+            Dim linearScaleRange3 As DevExpress.XtraGauges.Core.Model.LinearScaleRange = New DevExpress.XtraGauges.Core.Model.LinearScaleRange()
             Me.gaugeControl1 = New DevExpress.XtraGauges.Win.GaugeControl()
             Me.linearGauge1 = New DevExpress.XtraGauges.Win.Gauges.Linear.LinearGauge()
             Me.linearScaleRangeBarComponent1 = New DevExpress.XtraGauges.Win.Gauges.Linear.LinearScaleRangeBarComponent()
             Me.linearScaleComponent1 = New DevExpress.XtraGauges.Win.Gauges.Linear.LinearScaleComponent()
-            DirectCast(Me.linearGauge1, System.ComponentModel.ISupportInitialize).BeginInit()
-            DirectCast(Me.linearScaleRangeBarComponent1, System.ComponentModel.ISupportInitialize).BeginInit()
-            DirectCast(Me.linearScaleComponent1, System.ComponentModel.ISupportInitialize).BeginInit()
+            CType((Me.linearGauge1), System.ComponentModel.ISupportInitialize).BeginInit()
+            CType((Me.linearScaleRangeBarComponent1), System.ComponentModel.ISupportInitialize).BeginInit()
+            CType((Me.linearScaleComponent1), System.ComponentModel.ISupportInitialize).BeginInit()
             Me.SuspendLayout()
             ' 
             ' gaugeControl1
             ' 
             Me.gaugeControl1.Dock = System.Windows.Forms.DockStyle.Fill
-            Me.gaugeControl1.Gauges.AddRange(New DevExpress.XtraGauges.Base.IGauge() { Me.linearGauge1})
+            Me.gaugeControl1.Gauges.AddRange(New DevExpress.XtraGauges.Base.IGauge() {Me.linearGauge1})
             Me.gaugeControl1.Location = New System.Drawing.Point(0, 0)
             Me.gaugeControl1.Name = "gaugeControl1"
             Me.gaugeControl1.Size = New System.Drawing.Size(827, 343)
@@ -46,12 +48,12 @@
             ' 
             ' linearGauge1
             ' 
-            Me.linearGauge1.AutoSize = DevExpress.Utils.DefaultBoolean.False
+            Me.linearGauge1.AutoSize = DevExpress.Utils.DefaultBoolean.[False]
             Me.linearGauge1.Bounds = New System.Drawing.Rectangle(6, 6, 815, 331)
             Me.linearGauge1.Name = "linearGauge1"
             Me.linearGauge1.Orientation = DevExpress.XtraGauges.Core.Model.ScaleOrientation.Horizontal
-            Me.linearGauge1.RangeBars.AddRange(New DevExpress.XtraGauges.Win.Gauges.Linear.LinearScaleRangeBarComponent() { Me.linearScaleRangeBarComponent1})
-            Me.linearGauge1.Scales.AddRange(New DevExpress.XtraGauges.Win.Gauges.Linear.LinearScaleComponent() { Me.linearScaleComponent1})
+            Me.linearGauge1.RangeBars.AddRange(New DevExpress.XtraGauges.Win.Gauges.Linear.LinearScaleRangeBarComponent() {Me.linearScaleRangeBarComponent1})
+            Me.linearGauge1.Scales.AddRange(New DevExpress.XtraGauges.Win.Gauges.Linear.LinearScaleComponent() {Me.linearScaleComponent1})
             ' 
             ' linearScaleRangeBarComponent1
             ' 
@@ -102,7 +104,7 @@
             linearScaleRange3.ShapeOffset = 10F
             linearScaleRange3.StartThickness = 11F
             linearScaleRange3.StartValue = 40F
-            Me.linearScaleComponent1.Ranges.AddRange(New DevExpress.XtraGauges.Core.Model.IRange() { linearScaleRange1, linearScaleRange2, linearScaleRange3})
+            Me.linearScaleComponent1.Ranges.AddRange(New DevExpress.XtraGauges.Core.Model.IRange() {linearScaleRange1, linearScaleRange2, linearScaleRange3})
             Me.linearScaleComponent1.StartPoint = New DevExpress.XtraGauges.Core.Base.PointF2D(62.5F, 250F)
             Me.linearScaleComponent1.Value = 20F
             ' 
@@ -114,19 +116,21 @@
             Me.Controls.Add(Me.gaugeControl1)
             Me.Name = "Form1"
             Me.Text = "Form1"
-            DirectCast(Me.linearGauge1, System.ComponentModel.ISupportInitialize).EndInit()
-            DirectCast(Me.linearScaleRangeBarComponent1, System.ComponentModel.ISupportInitialize).EndInit()
-            DirectCast(Me.linearScaleComponent1, System.ComponentModel.ISupportInitialize).EndInit()
+            AddHandler Me.Load, New System.EventHandler(AddressOf Me.Form1_Load)
+            AddHandler Me.Resize, New System.EventHandler(AddressOf Me.Form1_Resize)
+            CType((Me.linearGauge1), System.ComponentModel.ISupportInitialize).EndInit()
+            CType((Me.linearScaleRangeBarComponent1), System.ComponentModel.ISupportInitialize).EndInit()
+            CType((Me.linearScaleComponent1), System.ComponentModel.ISupportInitialize).EndInit()
             Me.ResumeLayout(False)
-
         End Sub
 
-        #End Region
-
+'#End Region
         Private gaugeControl1 As DevExpress.XtraGauges.Win.GaugeControl
+
         Private linearGauge1 As DevExpress.XtraGauges.Win.Gauges.Linear.LinearGauge
+
         Private linearScaleRangeBarComponent1 As DevExpress.XtraGauges.Win.Gauges.Linear.LinearScaleRangeBarComponent
+
         Private linearScaleComponent1 As DevExpress.XtraGauges.Win.Gauges.Linear.LinearScaleComponent
     End Class
 End Namespace
-
