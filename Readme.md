@@ -6,9 +6,9 @@
 
 # WinForms Gauge - Configure linear gauge to fill the entire space if the width is significantly greater than the height
 
-The Linear Gauge has an aspect ratio of 1:2 ([Coordinate System](https://docs.devexpress.com/WindowsForms/18220/controls-and-libraries/gauges/concepts/coordinate-system)). You can not make the Lihear Gauge wider in automatic mode. If you simplify the gauge layout (for example, remove the [Background Layer](https://docs.devexpress.com/WindowsForms/DevExpress.XtraGauges.Win.Gauges.Linear.LinearGauge.BackgroundLayers)) and enable the [AutoSize](https://docs.devexpress.com/WindowsForms/DevExpress.XtraGauges.Win.Gauges.Linear.LinearGauge.AutoSize) option, the aspect ratio will be recalculated based on the gauge layout.
+The Linear Gauge has an aspect ratio of 1:2 ([Coordinate System](https://docs.devexpress.com/WindowsForms/18220/controls-and-libraries/gauges/concepts/coordinate-system)). You cannot make the Linear Gauge wider in automatic mode. If you simplify the gauge layout (for example, remove the [Background Layer](https://docs.devexpress.com/WindowsForms/DevExpress.XtraGauges.Win.Gauges.Linear.LinearGauge.BackgroundLayers)) and enable the [AutoSize](https://docs.devexpress.com/WindowsForms/DevExpress.XtraGauges.Win.Gauges.Linear.LinearGauge.AutoSize) option, the aspect ratio will be recalculated based on the gauge layout.
 
-The following gauge has an aspect ratio of 1:4 :
+The following gauge has a 1:4 aspect ratio:
 
 ![WinForms Linear Gauge](https://raw.githubusercontent.com/DevExpress-Examples/how-to-configure-linear-gauge-to-fill-all-space-if-width-exceeds-height-significantly-t158525/14.1.7+/media/3502ad27-4ec0-11e4-80ba-00155d624807.png)
 
