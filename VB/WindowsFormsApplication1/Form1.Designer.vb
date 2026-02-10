@@ -116,8 +116,8 @@ Namespace WindowsFormsApplication1
             Me.Controls.Add(Me.gaugeControl1)
             Me.Name = "Form1"
             Me.Text = "Form1"
-            AddHandler Me.Load, New System.EventHandler(AddressOf Me.Form1_Load)
-            AddHandler Me.Resize, New System.EventHandler(AddressOf Me.Form1_Resize)
+            Me.Load += New System.EventHandler(AddressOf Me.Form1_Load)
+            Me.Resize += New System.EventHandler(AddressOf Me.Form1_Resize)
             CType((Me.linearGauge1), System.ComponentModel.ISupportInitialize).EndInit()
             CType((Me.linearScaleRangeBarComponent1), System.ComponentModel.ISupportInitialize).EndInit()
             CType((Me.linearScaleComponent1), System.ComponentModel.ISupportInitialize).EndInit()
