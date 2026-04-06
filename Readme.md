@@ -15,7 +15,7 @@ The following gauge has a 1:4 aspect ratio:
 
 This example demonstrates how to scale the linear gauge horizontally:
 
-![WinForms Linear Gauge with Custom Aspect Ratio](https://raw.githubusercontent.com/DevExpress-Examples/how-to-configure-linear-gauge-to-fill-all-space-if-width-exceeds-height-significantly-t158525/14.1.7+/media/97aa6654-4ec0-11e4-80ba-00155d624807.png)
+![WinForms Linear Gauge with Custom Aspect Ratio](media/97aa6654-4ec0-11e4-80ba-00155d624807.png)
 
 ## Implementation Details
 
